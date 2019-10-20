@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<!-- Making Table fill the window. Instead of applying absolute positioning to it, I applied "style="height: 100%;" to the <html>,
+
+<body> and then <table> tags-->
+
+        <html>
+
+        <head>
+            <title>Bible.Timeline.Table</title>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script src="js-TimelineSam/jquery-3.4.1.min.js"></script>
+
+            <script src="js-TimelineSam/MouseWheelJQueryPlugin.js"></script>
+
+
+            <link href="css-TimelineSam/TimelineTableCSS.css" rel="stylesheet">
+            <link href="css-TimelineSam/TimelineCOLOR-2.css" rel="stylesheet">
+            <!--        <link href="css-TimelineSam/TimelineCOLOR-1.css"  rel="stylesheet">
+             -->
+        </head>
+
+        <body>
+            <div id="details"><button onclick="showHide()">Show/Hide</button></div>
+
+            <div>
+                <div style="position:absolute"><a href="index.html">Navigation</a></div>
+                <h3>A Bible Timeline of General Time Periods</h3>
+            </div>
+            <div class="timelineTableContainer">
+
+                <table class="timelineTable" id="timelineTable">
+                    <tr>
+                        <th colspan="2"></th>
+                        <th colspan="9">Present Age</th>
+                        <th colspan="3">Age to Come</th>
+                    </tr>
+                    <tr class="mainT2">
+
+
+                        <td colspan="2" href="#beforeCreation">Before Creation</td>
+
+
+                        <td colspan="3" id="hider">Temple of Eden</td>
+                        <td href="#noTemple">No Temple</td>
+                        <td>Old Covenant</td>
+                        <td colspan="4">Old &amp; New Covenant</td>
+                        <td colspan="3">New Covenant</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Christ Chosen</td>
+                        <td>Creation</td>
+                        <td>Transgression</td>
+                        <td>Flood</td>
+                        <td>Babel</td>
+                        <td>The Law</td>
+                        <td>Crucificxion</td>
+                        <td>Christ Ascended</td>
+                        <td>1,000 Year Reign</td>
+                        <td>Intermediate</td>
+                        <td>Last Resurrection</td>
+                        <td>New Jerusalem</td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <!-- This DIV contains the details for each cell. -->
+            <div id="details">
+                <div style="padding: 10px 10px 50px 10px;
+    display: block;">
+                    <h2>These are Details</h2>
+                    <p>Please click on any of the events <i>(table cells)</i> for more details if available.</p>
+                </div>
+                <!--include the ID that the <a> will reference-->
+                <div id="beforeCreation">
+                    <!--Put the HEADING of the Content here-->
+                    <h2>Before Creation</h2>
+                    <!--The details go here-->
+                    <p>There was a time before creation. What we find in Genesis 1 is the beginning of this age. Quite clearly, we can see that matter already existed but was only shaped. In other words, what we have in Genesis is not the very beginning of all things, but only the beginning of this age.</p>
+                    <p>There was a time before creation. What we find in Genesis 1 is the beginning of this age. Quite clearly, we can see that matter already existed but was only shaped. In other words, what we have in Genesis is not the very beginning of all things, but only the beginning of this age.</p>
+                    <p>There was a time before creation. What we find in Genesis 1 is the beginning of this age. Quite clearly, we can see that matter already existed but was only shaped. In other words, what we have in Genesis is not the very beginning of all things, but only the beginning of this age.</p>
+                    <p>There was a time before creation. What we find in Genesis 1 is the beginning of this age. Quite clearly, we can see that matter already existed but was only shaped. In other words, what we have in Genesis is not the very beginning of all things, but only the beginning of this age.</p>
+                    <p>There was a time before creation. What we find in Genesis 1 is the beginning of this age. Quite clearly, we can see that matter already existed but was only shaped. In other words, what we have in Genesis is not the very beginning of all things, but only the beginning of this age.</p>
+                </div>
+                <div id="">
+                    <!--Put the HEADING of the Content here-->
+                    <h2>Heading</h2>
+                    <!--The details go here-->
+                    <p>...</p>
+                </div>
+
+                <div id="noTemple">
+                    <!--Put the HEADING of the Content here-->
+                    <h2>No Temple</h2>
+                    <!--The details go here-->
+                    <p>The flood destroyed Eden and its Garden which was the Tabernacle of God before it. Though God still related with men, as is evident with Melchizedek, Abraham, even all the way to Balaam, there was temple on earth until the institution of the Old Covenant in the wilderness.<br>
+                        Nevertheless, though there wasn't a temple until the Law, there were altars. Noah built one after the flood, and Abraham also did.</p>
+                </div>
+
+
+            </div>
+
+        </body>
+
+
+
+        <script src="js-TimelineSam/TimelineTableJS.js"></script>
+        <script src="js-TimelineSam/TimelineDragable.js"></script>
+
+        <!-- This is for hiding table cells.
+The challenge is preventing the horizontal movement of other table cells on the same row-->
+        <script>
+            function showHide() {
+                $('#hider').toggle('fast')
+            }
+        </script>
+
+
+        <!--
+<script>
+                $("tr").mousewheel(function(ev, val) {
+                    if (val > 0) {
+                        $(this).next().hide()
+                    } else if (val < 0) {
+                        $(this).next().show()
+                    };
+                });
+</script>
+--></html>
