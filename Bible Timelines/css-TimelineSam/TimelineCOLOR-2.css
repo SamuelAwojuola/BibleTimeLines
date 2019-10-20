@@ -1,0 +1,128 @@
+/* GENERAL STYLING */
+html{
+    height: 100%;
+}
+
+body {
+    background-color:rgb(255, 255, 255);
+    height: 100%;
+}
+body h3{
+    color: #450000;
+    text-align: center;
+    margin-bottom: -5px;
+}
+
+h1,
+h2,
+h3 {
+    color:;
+}
+
+
+
+/* SCROLLBARS (Change appearance and color of the scrollbars)*/
+::-webkit-scrollbar {
+    background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(253, 253, 253, 0.26);
+}
+
+
+
+
+/* TIMELINE TABLE DIV CONTAINER and THE DETAILS DIV CONTAINER STYLING */
+
+.timelineTableContainer {
+    box-shadow: 0 6px 5px -5px #000000;
+    border: 1px solid rgb(36, 28, 28);
+    background: rgb(69, 48, 48);
+}
+
+#details {
+    box-shadow: -5px 6px 5px -5px #000000;
+    border: 1px solid rgba(92, 0, 0, 0);
+    background: rgba(248, 255, 192, 0.64);
+}
+
+/* Timeline Table DIV*/
+.timelineTableContainer {
+    background-color: ;
+}
+
+/* Details DIV */
+#details {
+    color: #020000;
+}
+
+/* Individual Content/Details DIV */
+#details div {
+}
+
+
+
+
+/* LINKS */
+/* With a change to the jquery code, I no longer needed these links.
+To use <a> and make the whold <td> clickable, remove the padding on the cells
+
+td a {
+    display: block;
+    color: #000;
+    text-decoration: none;  
+    text-align:center;
+    padding: 20px 20px;
+    height: 100%;
+    
+}
+
+a:hover {
+    background-color: #555;
+    color: white;
+}
+
+*/
+
+
+
+
+/* TIMELINE TABLE STYLING */
+
+.timelineTable {
+    border-collapse: collapse;
+}
+
+.timelineTable th {
+    color: #050010;
+    background-color:#d6b488;
+}
+
+.timelineTable tr {
+    border-color: inherit;
+}
+
+.timelineTable td {
+    color: #002b36;
+    background-color: #fdf6e3;
+}
+
+.mainT2 td {
+    background-color:#eee8d5;
+}
+
+.timelineTable th,
+td {
+   border: 1px solid rgb(36, 28, 28);
+}
+
+.timelineTable th:hover,
+td:hover {
+    background-color:#b5b5b5 ;
+    box-shadow: 0px 0px 10px 0px grey;
+}
