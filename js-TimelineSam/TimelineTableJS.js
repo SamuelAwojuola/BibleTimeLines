@@ -14,3 +14,34 @@ $(document).ready(function () {
         $(selected).children().show();
     });
 });
+
+//to toggle class. The class to be toggled is declared in the onclick function in the <li>
+//    function hider(sh) {
+//        $(sh).toggle('slow');
+//      };
+function hider(sh) {
+    $(sh).toggleClass('eventHidden');
+};
+
+
+//removes row with empty cells
+if ($('tr').children('visibility:hidden').length == 0) {
+    // action when all are hidden
+    $(this).hide();
+}
+
+//change nav item colour
+$("#nav li").click(function () {
+    $(this).toggleClass('navColor');
+});
+
+$( "#christ, .christ" ).hover(
+		function()
+		{
+			$( ".christ" ).addClass( "hoverWhite" );
+		},
+		function()
+		{
+			$( ".christ" ).removeClass( "hoverWhite" );
+		}
+	);

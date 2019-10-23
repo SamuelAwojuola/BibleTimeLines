@@ -123,6 +123,5 @@ td {
 
 .timelineTable th:hover,
 td:hover {
-    background-color:#b5b5b5 ;
-    box-shadow: 0px 0px 10px 0px grey;
+    background-color:#e5ebb9 ;
 }

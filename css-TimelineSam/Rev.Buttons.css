@@ -1,0 +1,64 @@
+#navigation{
+	height: auto;
+	width: 100%;
+	border-bottom: 1px solid pink;
+	padding-bottom: 2px;
+	position: fixed;
+	z-index: 1;
+	background-color:white;
+	}
+
+#showAll_hideAll {
+	float: left;
+	}
+
+#eventsNav {
+	float: right;
+	padding: 2px;
+	margin: 5px;
+	}
+
+.btn {
+	border-left:1px solid rgba(111, 111, 111, 0.9);
+	border-right:1px solid rgba(111, 111, 111, 0.9);
+	position: relative;
+	width:auto;
+	text-align: left;
+	background-color: white;
+	color: green;
+	padding:5px;
+	margin:-2px;
+	}
+
+.btn:hover {
+	border-left:1px solid red;
+	border-right:1px solid red;
+	background-color: rgb(255, 252, 207);
+	text-decoration: bold;
+	}
+
+.btnShowHide {
+	display: inline-block;
+	border-radius: 4px;
+	background-color: white;
+	border: 1px  solid rgb(220, 220, 220);
+	color: black;
+	text-align: center;
+	padding: 2px;
+	cursor: pointer;
+	margin: 5px;
+	transition: all 0.5s;
+}
+
+.btnShowHide:hover {
+	border: 1px  solid rgb(200, 200, 200);
+	text-spacing: 5px;
+	transition: all 0.1s;
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2);
+}
+
+.btnShowHide:active {
+	border: 1px solid rgb(230, 230, 230);
+	padding-right: 5px;
+	box-shadow: 0 0 0 0 rgba(0,0,0,0.2);
+}

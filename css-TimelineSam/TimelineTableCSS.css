@@ -136,3 +136,16 @@ td:hover {
     
     z-index: 100;
 }
+
+/*NAV List*/
+#nav li{
+    display:block;
+    padding-left: 5px;
+    padding-right: 5px;
+	float:left;
+	border:1px solid #937373;
+}
+
+.hoverWhite {
+    background-color: azure;
+}
