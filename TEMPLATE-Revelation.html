@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<!-- Making Table fill the window. Instead of applying absolute positioning to it, I applied "style="height: 100%;" to the <html>,
+
+<body> and then <table> tags-->
+
+<html>
+
+<head>
+    <title>Bible.Timeline.Table</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js-TimelineSam/jquery-3.4.1.min.js"></script>
+
+    <script src="js-TimelineSam/MouseWheelJQueryPlugin.js"></script>
+
+
+    <link href="css-TimelineSam/TimelineTableCSS.css" rel="stylesheet">
+    <link href="css-TimelineSam/TimelineCOLOR-2.css" rel="stylesheet">
+    <!--        <link href="css-TimelineSam/TimelineCOLOR-1.css"  rel="stylesheet">
+             -->
+    <link href="css-TimelineSam/Rev.Buttons.css" rel="stylesheet">
+    <script>
+        //This is to change Buttons' color//
+        function buttonColor(id) {
+            var e = document.getElementById(id);
+            if (e.style.color == 'red')
+                e.style.color = 'green';
+            else
+                e.style.color = 'red';
+        }
+    </script>
+    <style>
+        .timelineTableContainer {
+            position: relative;
+            border: 3px solid black;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            background-color: rgba(0, 0, 0, 0.5);
+            overflow: scroll;
+        }
+
+        .time td {
+            background-color: rgba(255, 228, 228, 0.5);
+            height: 10px;
+        }
+
+        .navColor {
+            background-color: bisque;
+        }
+
+        .eventHidden {
+            visibility: hidden;
+            border: none;
+            width: 0px;
+            height: 0px;
+            opacity: 0;
+            -moz-transition: opacity 1s, visibility 1.3s;
+            -webkit-transition: opacity 1s, visibility 1.3s;
+            -o-transition: opacity 1s, visibility 1.3s;
+            transition: opacity 1s, visibility 1.3s;
+        }
+
+        .eventVisible {
+            visibility: visible;
+            opacity: 1;
+            -moz-transition: opacity 1s, visibility 1.3s;
+            -webkit-transition: opacity 1s, visibility 1.3s;
+            -o-transition: opacity 1s, visibility 1.3s;
+            transition: opacity 1s, visibility 1.3s;
+        }
+
+        td:empty,
+        td:empty:hover {
+            background-color: rgba(138, 43, 226, 0);
+            border: none;
+            box-shadow: none;
+        }
+
+        tr:empty {
+            display: none;
+        }
+
+        tr {
+            margin: 0px;
+            padding: 0px;
+            height: 0px;
+        }
+
+        td {
+            padding: 5px;
+            margin: 0px;
+            min-width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="eventsNav" id="details">
+        <ul id="nav" style="float: right; list-style-type: none; margin: 0; padding: 0;">
+            <li id="christ" onclick="hider('.christ')">Christ</li>
+            <li onclick="hider('.seven-seals')">7 Seals</li>
+            <li onclick="hider('.seven-trumpets')">7 Trumpets</li>
+            <li onclick="hider('.seven-bowls')">7 Bowls</li>
+            <li onclick="hider('.openings')">3 Openings</li>
+            <li onclick="hider('.saints')">Saints</li>
+            <li onclick="hider('._144000')">144,000</li>
+            <li onclick="hider('.resurrection')">Resurrection</li>
+            <li onclick="hider('.jerusalem')">Jerusalem</li>
+            <li onclick="hider('.satan')">Satan</li>
+            <li onclick="hider('.beast')">Beast</li>
+            <li onclick="hider('.abyss')">Abyss</li>
+            <li onclick="hider('.time')">Times</li>
+        </ul>
+    </div>
+
+    <div>
+        <div style="position:absolute"><a href="index.html">Navigation</a></div>
+        <h3>Revelation Timeline</h3>
+    </div>
+    <!-- This DIV contains the Main Timeline Table -->
+    <div class="timelineTableContainer" style="background-color:#f8f8b8">
+        <!-- To show details, add href="id" to the opening <td> tag.
+            E.g., <td colspan="2" href="#beforeCreation">Before Creation</td> -->
+
+        <table class="timelineTable" id="timelineTable">
+            <tr>
+                <td class="jerusalem jerusalem-1">Queen Jerusalem in child labour</td>
+                <td class="christ christ-1">Christ, the Man Child is Born &amp; Ascends to Heaven
+                </td>
+                <td class="christ christ-2">Men are purchased "for God from every tribe &amp; language..." with the blood of Christ, through the preaching of the gospel
+                </td>
+                <td class="christ christ-3">Christ receives authority over the Nations
+                </td>
+                <td class="satan satan-2">War in Heaven Michael and his angels fight against the dragon and his angels
+                </td>
+                <td class="christ christ-4">The LAMB receives the Scroll with 7 Seals
+                </td>
+                <td class="seven-seals seven-seals-1">Seals 1-6</td>
+                <td></td>
+                <td class="seven-seals seven-seals-2">Seal 7</td>
+                <td class="seven-trumpets seven-trumpets-1">Trumpets 1-6</td>
+                <td></td>
+                <td></td>
+                <td class="seven-trumpets seven-trumpets-2">Trumpet 7</td>
+                <td class="seven-bowls seven-bowls-1">Bowls 1—6 of Wrath</td>
+                <td class="seven-bowls seven-bowls-2">Bowl 7 of Wrath</td>
+                <td class="christ christ-5">The LAMB stands on Mount Zion with 144,000
+                </td>
+                <td class="christ christ-6">Harvest the Earth</td>
+                <td class="christ christ-7">Rider on a White Horse with Armies of Heaven
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="christ christ-8">Judgment of the Dead</td>
+                <td></td>
+                <td class="jerusalem jerusalem-2">The New Jerusalem descends from Heaven to Earth</td>
+            </tr>
+            <tr class="time" style="border: 3px solid black;">
+                <td></td>
+                <td></td>
+                <td class="time time-1">2,000 yrs</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="time time-2">3½ Years</td>
+                <td class="time time-3">3½ Days</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td colspan="2" class="time time-4">1 hour</td>
+                <td></td>
+                <td class="time time-5">1,000 years</td>
+                <td class="time time-6">short time</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="satan satan-1">Dragon's tail destroys 1/3 of Jerusalem's children</td>
+                <td></td>
+                <td class="saints saints-1">The saints preach the Gospel of Christ </td>
+                <td></td>
+                <td class="satan satan-3">Dragon and his angels are cast down to the earth</td>
+                <td></td>
+                <td></td>
+                <td class="_144000 _144000-1">144,000 are Sealed </td>
+                <td class="openings opening-1">The Scroll with 7 seals is OPENED</td>
+                <td class="abyss abyss-2">Abyss Opened (5th Trumpet)</td>
+                <td class="beast beast-2">Reign of Beast</td>
+                <td class="beast beast-3">Beast from the Abyss kills the 2 Witnesses</td>
+                <td class="openings openings-2">Temple in Heaven is OPENED BUT NOT ACCESSIBLE</td>
+                <td></td>
+                <td class="openings openings-3">Heaven is OPENED--Temple in Heaven accessible</td>
+                <td class="_144000 _144000-2">144,000 on Mount Zion
+                </td>
+                <td class="resurrection resurrection-1">1st Resurrection</td>
+                <td class="beast beast-6">Battle of Armageddon</td>
+                <td></td>
+                <td></td>
+                <td class="satan satan-4">The Last Resurrection--all the dead are judged</td>
+                <td></td>
+                <td class="resurrection resurrection-2">Last Resurrection</td>
+                <td></td>
+            </tr>
+
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="seven-seals seven-seals-3">The judgments of the 7 Trumpets are the result of the opened scroll
+                </td>
+                <td class="abyss abyss-1">Plague of Locust from the Abyss</td>
+                <td class="saints saints-2">Ministry of the 2 Witnesses</td>
+                <td class="saints saints-3">2 Witnesses are killed (by the Beast at the end of his reign)
+                    rise to life and ascend to heaven after 3½ days
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td colspan="2" class="beast beast-4">10 horns receive authority as kings with the Beast</td>
+                <td></td>
+                <td class="satan satan-5">Satan imprisoned in the Abyss</td>
+                <td class="satan satan-6">Satan released from the Abyss</td>
+                <td></td>
+                <td></td>
+                <td class="satan satan-7">Satan, death &amp; Hades in the Lake of fire</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="beast beast-1">Beast Rises from the Opened Abyss</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="beast beast-5">The Beast &amp;the 10 horns destroy Babylon the Great</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+
+    <!-- This DIV contains the details for each cell. -->
+    <div id="details">
+        <div style="padding: 10px 10px 50px 10px; display: block;">
+            <h2>These are Details</h2>
+            <p>Please click on any of the events <i>(table cells)</i> for more details if available.</p>
+        </div>
+        <!--include the ID that the corresponding <td href=""> will reference-->
+        <div id="beforeCreation">
+            <!--Put the HEADING of the Content here-->
+            <h2>Before Creation</h2>
+            <!--The details go here-->
+            <p>Content...</p>
+        </div>
+        <div id="...">
+            <h2>Heading</h2>
+            <p>content...</p>
+        </div>
+
+        <div id="...">
+            <h2>Heading</h2>
+            <p>content...</p>
+        </div>
+
+
+    </div>
+
+</body>
+
+
+<script src="js-TimelineSam/jquery-3.4.1.min.js"></script>
+<script src="js-TimelineSam/TimelineTableJS.js"></script>
+<script src="js-TimelineSam/Revelation%20Prototype%20ver0.02%20-%20jQuery.js"></script>
+<script src="js-TimelineSam/Revelation%20Prototype%20ver0.02%20ClassHover-%20jQuery.js"></script>
+<script src="js-TimelineSam/Revelation%20showAll_hideAll.js"></script>
+
+</html>
+
+
+</html>
