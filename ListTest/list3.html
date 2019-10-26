@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style>
+        #timeline {
+            display: block;
+            /*          background-color: aliceblue;*/
+            border: 1px dotted red;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+        }
+
+        /*Remove Left Padding from all ULs in the TimeLine*/
+        #timeline ul {
+            padding-left: 0px;
+            border-collapse: collapse;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /*      li:nth-child(even) {background-color:;}
+        li:nth-child(odd) {background-color:;}
+*/
+        .mainTimeline {
+            overflow: auto;
+            /*This is for the scrolling of the Timeline in the container DIV*/
+        }
+
+        .subList {
+            margin-top: 50px;
+        }
+
+        li {
+            border-left: 2px solid grey;
+            border-left: 5p00x;
+            border-bottom: 1px solid grey;
+            display: table-cell;
+            /*This is the only display that worked (to make the list not break onto another line). However, maybe some other display would have worked in combination with some POSITIONING thing.*/
+            min-width: 100px;
+            height: 100px;
+            border-collapse: collapse;
+        }
+
+        li:first-child {
+            border-left: none;
+        }
+
+        li div {
+            padding-left: 5px;
+            padding-right: 5px;
+            margin-right: 10px;
+            border: 1px solid grey;
+            border-left: 0;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            background-color:#ffddee;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="position:relative; float: left; margin-right: 20px;"><a href='../index.html'>Navigation</a></div><h3>Timeline Made With an HTML List</h3>
+    <div id="timeline">
+        <ul class="mainTimeline">
+            <li>
+                <div><a href="#">Item one</a></div>
+            </li>
+            <li>
+                <div><a href="#">Item two</a></div>
+                <ul class="subList">
+                    <li>
+                        <div><a href="#">Sub-Item one</a></div>
+                    </li>
+                    <li>
+                        <div><a href="#">Sub-Item two</a></div>
+                    </li>
+                    <li>
+                        <div><a href="#">Sub-Item three</a></div>
+                    </li>
+                    <li>
+                        <div><a href="#">Sub-Item four</a></div>
+                    </li>
+                    <li>
+                        <div><a href="#">Sub-Item five</a></div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div><a href="#">Item three</a></div>
+            </li>
+            <li>
+                <div><a href="#">Item four</a></div>
+            </li>
+            <li>
+                <div><a href="#">Item five</a></div>
+                <ul class="subList">
+                    <li>
+                        <div><a href="#">Sub-Item one</a></div>
+                    </li>
+                    <li>
+                        <div><a href="#">Sub-Item two</a></div>
+                    </li>
+                    <li>
+                        <div><a href="#">Sub-Item three</a></div>
+                        <ul class="subList">
+                            <li>
+                                <div><a href="#">Sub-Item one</a></div>
+                            </li>
+                            <li>
+                                <div><a href="#">Sub-Item two</a></div>
+                            </li>
+                            <li>
+                                <div><a href="#">Sub-Item three</a></div>
+                            </li>
+                            <li>
+                                <div><a href="#">Sub-Item four</a></div>
+                            </li>
+                            <li>
+                                <div><a href="#">Sub-Item five</a></div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div><a href="#">Sub-Item four</a></div>
+                    </li>
+                    <li>
+                        <div><a href="#">Sub-Item five</a></div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

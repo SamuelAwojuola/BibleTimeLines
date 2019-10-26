@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="jquery-3.4.1.min.js" type="text/javascript"></script>
+    <style>
+        body {
+            background-color: #003b3c;
+            color: aliceblue;
+        }
+
+        #timeline {
+            background-color: rgba(245, 245, 220, 0.31);
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            /*Font Styling*/
+            font-size: 20px;
+            font-weight: 1000;
+            overflow: auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: floralwhite;
+            text-emphasis: auto;
+        }
+
+        /*Remove Left Padding from all ULs in the TimeLine*/
+        ul {
+            position: relative;
+            display: table;
+            padding-left: 0px;
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+            border-collapse: collapse;
+            background-color: burlywood;
+        }
+
+        ul {
+            margin-bottom: 0px;
+        }
+
+        /*      li:nth-child(even) {background-color:;}
+        li:nth-child(odd) {background-color:;}
+*/
+        .mainTimeline {
+            overflow: auto;
+            /*This is for the scrolling of the Timeline in the container DIV*/
+        }
+
+        .SubList1 {
+            margin-top: 20px;
+            background-color: cadetblue;
+        }
+
+        .SubList1>li {
+            height: 200px;
+        }
+
+        li {
+            height: 300px;
+        }
+
+
+        li {
+            display: table-cell;
+            /*This is the only display that worked (to make the list not break onto another line). However, maybe some other display would have worked in combination with some POSITIONING thing.*/
+            border-left: 1px solid floralwhite;
+            border-bottom: 1px solid grey;
+            padding-left: ;
+            list-style: square;
+            min-width: 200px;
+            border-collapse: collapse;
+            -webkit-transition: background-color 1s; /* For Safari 3.1 to 6.0 */
+            transition: background-color 0.5s;
+        }
+
+        li:first-child {
+            border-left: none;
+        }
+
+        li div {
+            text-align: center;
+            padding-left: 5px;
+            padding-right: 5px;
+            margin-right: 10px;
+            height: 50px;
+            /*          border: 1px solid grey;
+            border-left:0;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+            background-color:;*/
+        }
+
+        li:hover {
+            background-color: rgba(65, 0, 70, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div style="position:relative; float: left; margin-right: 20px;"><a href='../index.html'>Navigation</a></div>
+    <h3>General Bible Timeline (HTML List)</h3>
+    <div id="timeline">
+        <ul class="mainTimeline">
+            <li>
+                <div><a href="#">Before Creation</a></div>
+                <ul class="SubList1" data-key="sameHeights">
+                    <li>
+                        <div><a href="#"> </a></div>
+                    </li>
+                    <li>
+                        <div><a href="#">Christ Chosen</a></div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div><a href="#">Temple of Eden</a></div>
+                <ul class="SubList1" data-key="sameHeights">
+                    <li>
+                        <div><a href="#">Creation</a></div>
+                    </li>
+                    <li>
+                        <div><a href="#">Transgression</a></div>
+                    </li>
+                    <li>
+                        <div><a href="#">Flood</a></div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div><a href="#">No Temple</a></div>
+                <ul class="SubList1" data-key="sameHeights">
+                    <li>
+                        <div><a href="#">Babel</a></div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div><a href="#">Old Covenant</a></div>
+                <ul class="SubList1" data-key="sameHeights">
+                    <li>
+                        <div><a href="#">The LAW</a></div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div><a href="#">Old Covenant & New Covenant</a></div>
+                <ul class="SubList1" data-key="sameHeights">
+                    <li>
+                        <div><a href="#">Crucifixion</a></div>
+                    </li>
+                    <li>
+                        <div><a href="#">Christ Ascended</a></div>
+                    </li>
+                    <li>
+                        <div><a href="#">1,000 YRS Reign</a></div>
+                    </li>
+                    <li>
+                        <div><a href="#">Intermediate</a></div>
+                        <ul class="" style="background-color: #d9566d;">
+                            <li>
+                                <div><a href="#">Crucifixion</a></div>
+                            </li>
+                            <li>
+                                <div><a href="#">Christ Ascended</a></div>
+                            </li>
+                            <li>
+                                <div><a href="#">1,000 YRS Reign</a></div>
+
+                                <ul class="" style="background-color: #d9566d;">
+                                    <li>
+                                        <div><a href="#">Crucifixion</a> </div>
+                                    </li>
+                                    <li>
+                                        <div><a href="#">Christ Ascended</a> </div>
+                                    </li>
+                                    <li>
+                                        <div><a href="#">1,000 YRS Reign</a> </div>
+                                    </li>
+                                    <li>
+                                        <div><a href="#">Intermediate</a> </div>
+                                    </li>
+                                </ul>
+
+                            </li>
+                            <li>
+                                <div><a href="#">Intermediate</a></div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div><a href="#">New Covenant</a></div>
+                <ul class="SubList1">
+                    <li>
+                        <div><a href="#">Last Resurrection</a></div>
+                        <ul class="" style="background-color: #d9566d;">
+                            <li>
+                                <div><a href="#">The Judgment of the Dead</a></div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div><a href="#">New Jerualem on Earth</a></div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div style="position: fixed; bottom: 5px;  z-index: 30; background-color: rgba(255, 69, 0, 0.24); height:100%; width: 100%;"></div>
+
+</body>
+<script src="sameHeight1.js" type="text/javascript"></script>
+<script src="scrollbooster.min.js"></script>
+<!--     https://github.com/ilyashubin/scrollbooster/blob/master/index.html-->
+<script>
+    let viewport = document.querySelector('#timeline') /*The container*/
+    let content = viewport.querySelector('.mainTimeline') /*What should scroll inside it*/
+    let sb = new ScrollBooster({
+        viewport, // this parameter is required
+        content, // scrollable element
+        mode: 'x', // scroll only in horizontal dimension
+        onUpdate: (data) => {
+            // your scroll logic goes here
+            content.style.transform = `translateX(${-data.position.x}px)`
+        }
+    })
+</script></html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="jquery-3.4.1.min.js" type="text/javascript"></script>
+    <style>
+        body {
+            background-color: #003b3c;
+            color: aliceblue;
+        }
+
+        #timeline {
+            background-color: rgba(245, 245, 220, 0.31);
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            /*Font Styling*/
+            font-size: 20px;
+            font-weight: 1000;
+            overflow: auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: floralwhite;
+            text-emphasis: auto;
+        }
+
+        /*Remove Left Padding from all ULs in the TimeLine*/
+        ul {
+            position: relative;
+            display: table;
+            padding-left: 0px;
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+            border-collapse: collapse;
+            background-color: burlywood;
+        }
+
+        ul {
+            margin-bottom: 0px;
+        }
+
+        /*      li:nth-child(even) {background-color:;}
+        li:nth-child(odd) {background-color:;}
+*/
+        .mainTimeline {
+            overflow: auto;
+            /*This is for the scrolling of the Timeline in the container DIV*/
+        }
+
+        .SubList1 {
+            margin-top: 20px;
+            background-color: cadetblue;
+            z-index: 30;
+        }
+
+        .SubList1>li {
+            height: 200px;
+        }
+
+        li {
+            height: 300px;
+        }
+
+
+        li {
+            display: table-cell;
+            /*This is the only display that worked (to make the list not break onto another line). However, maybe some other display would have worked in combination with some POSITIONING thing.*/
+            border-left: 1px solid floralwhite;
+            border-bottom: 1px solid grey;
+            padding-left: ;
+            list-style: square;
+            min-width: 200px;
+            border-collapse: collapse;
+            -webkit-transition: background-color 1s;
+            /* For Safari 3.1 to 6.0 */
+            transition: background-color 0.5s;
+        }
+
+        li:first-child {
+            border-left: none;
+        }
+
+        li div {
+            text-align: center;
+            padding-left: 5px;
+            padding-right: 5px;
+            margin-right: 10px;
+            height: 50px;
+            /*          border: 1px solid grey;
+            border-left:0;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+            background-color:;*/
+        }
+
+        li:hover {
+            background-color: rgba(65, 0, 70, 0.5);
+        }
+    </style>
+    <style>
+        /* SCROLLBARS (Change appearance and color of the scrollbars)*/
+        ::-webkit-scrollbar {
+            -webkit-appearance: none;
+            width: 7px;
+            height: 7px;
+
+        }
+
+        ::-webkit-scrollbar-thumb {}
+
+        ::-webkit-scrollbar-thumb:hover {
+            width: 2px;
+            border-radius: 0px;
+        }
+
+        /* Details DIV */
+        #details {
+            overflow: auto;
+            bottom: 0px;
+            width: 100%;
+            margin: 10px auto;
+        }
+
+        /* Individual Content/Details DIV */
+        #details div {
+            display: none;
+            /* Hides all details by default. Only the called detail appears in the #DETAILS DIV. */
+            padding: 10px 10px 50px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="position:relative; float: left; margin-right: 20px;"><a href='../index.html'>Navigation</a></div>
+    <h3>General Bible Timeline (HTML List)</h3>
+    <div id="timeline">
+        <ul class="mainTimeline">
+            <li>
+                <div href="#beforeCreation">Before Creation</div>
+                <ul class="SubList1" data-key="sameHeights">
+                    <li>
+                        <div>God</div>
+                    </li>
+                    <li>
+                        <div href="#ChristChosen">Christ Chosen</div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div>Temple of Eden</div>
+                <ul class="SubList1" data-key="sameHeights">
+                    <li>
+                        <div>Creation</div>
+                    </li>
+                    <li>
+                        <div>Transgression</div>
+                    </li>
+                    <li>
+                        <div>Flood</div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div href="#noTemple">No Temple</div>
+                <ul class="SubList1" data-key="sameHeights">
+                    <li>
+                        <div>Babel</div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div>Old Covenant</div>
+                <ul class="SubList1" data-key="sameHeights">
+                    <li>
+                        <div>The LAW</div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div>Old Covenant & New Covenant</div>
+                <ul class="SubList1" data-key="sameHeights">
+                    <li>
+                        <div>Crucifixion</div>
+                    </li>
+                    <li>
+                        <div>Christ Ascended</div>
+                    </li>
+                    <li>
+                        <div>1,000 YRS Reign</div>
+                    </li>
+                    <li>
+                        <div>Intermediate</div>
+                        <ul class="" style="background-color: #d9566d;">
+                            <li>
+                                <div>Crucifixion</div>
+                            </li>
+                            <li>
+                                <div>Christ Ascended</div>
+                            </li>
+                            <li>
+                                <div>1,000 YRS Reign</div>
+
+                                <ul class="" style="background-color: #d9566d;">
+                                    <li>
+                                        <div>Crucifixion </div>
+                                    </li>
+                                    <li>
+                                        <div>Christ Ascended </div>
+                                    </li>
+                                    <li>
+                                        <div>1,000 YRS Reign </div>
+                                    </li>
+                                    <li>
+                                        <div>Intermediate </div>
+                                    </li>
+                                </ul>
+
+                            </li>
+                            <li>
+                                <div>Intermediate</div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div>New Covenant</div>
+                <ul class="SubList1">
+                    <li>
+                        <div>Last Resurrection</div>
+                        <ul class="" style="background-color: #d9566d;">
+                            <li>
+                                <div>The Judgment of the Dead</div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div>New Jerualem on Earth</div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div id="details">
+        <div style="padding: 10px 10px 50px 10px;
+    display: block;">
+            <h2>These are Details</h2>
+            <p>Please click on any of the events <i>(table cells)</i> for more details if available.</p>
+        </div>
+        <!--include the ID that the <a> will reference-->
+        <div id="beforeCreation">
+            <!--Put the HEADING of the Content here-->
+            <h2>Before Creation</h2>
+            <!--The details go here-->
+            <p>There was a time before creation. What we find in Genesis 1 is the beginning of this age. Quite clearly, we can see that matter already existed but was only shaped. In other words, what we have in Genesis is not the very beginning of all things, but only the beginning of this age.</p>
+        </div>
+        
+        <div id="ChristChosen">
+            <!--Put the HEADING of the Content here-->
+            <h2>Christ Chosen</h2>
+            <!--The details go here-->
+            <p>"If he called them ‘gods,’ to whom the word of God came—and the Scripture cannot be broken— 36what about the one whom the Father set apart as his very own and sent into the world? Why then do you accuse me of blasphemy because I said, ‘I am God’s Son’?" [Joh 10:35-36]</p>
+        </div>
+
+        <div id="">
+            <!--Put the HEADING of the Content here-->
+            <h2>Heading</h2>
+            <!--The details go here-->
+            <p>...</p>
+        </div>
+
+        <div id="noTemple">
+            <!--Put the HEADING of the Content here-->
+            <h2>No Temple</h2>
+            <!--The details go here-->
+            <p>The flood destroyed Eden and its Garden which was the Tabernacle of God before it. Though God still related with men, as is evident with Melchizedek, Abraham, even all the way to Balaam, there was temple on earth until the institution of the Old Covenant in the wilderness.<br>
+                Nevertheless, though there wasn't a temple until the Law, there were altars. Noah built one after the flood, and Abraham also did.</p>
+        </div>
+
+
+    </div>
+
+</body>
+<script src="TimelineTableJS.js"></script>
+<script src="sameHeight1.js" type="text/javascript"></script>
+<script src="scrollbooster.min.js"></script>
+<!--     https://github.com/ilyashubin/scrollbooster/blob/master/index.html-->
+<script>
+    let viewport = document.querySelector('#timeline') /*The container*/
+    let content = viewport.querySelector('.mainTimeline') /*What should scroll inside it*/
+    let sb = new ScrollBooster({
+        viewport, // this parameter is required
+        content, // scrollable element
+        mode: 'x', // scroll only in horizontal dimension
+        onUpdate: (data) => {
+            // your scroll logic goes here
+            content.style.transform = `translateX(${-data.position.x}px)`
+        }
+    })
+</script></html>

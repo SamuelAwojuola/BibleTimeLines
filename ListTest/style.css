@@ -1,0 +1,68 @@
+#timeline {
+    position: relative;
+    display: inline-grid;
+    width: 10000px;
+
+}
+
+ul {
+    display: inline-table;
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    padding-bottom: 0;
+    height: 0;
+    width: auto;
+    overflow: hidden;
+    background-color: antiquewhite;
+}
+
+#mainTimeline li:nth-child(even) {
+    background-color: #cb00ab;
+    border-color: aliceblue;
+}
+
+
+
+li div {
+    background-color: antiquewhite;
+    display: inline;
+    width: auto;
+    padding: 3px;
+}
+
+li {
+    display: table-cell;
+    text-align: left;
+    margin: 0 5px;
+}
+
+li a {
+    padding: 1px 7px;
+    color: #666;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    text-decoration: none;
+}
+
+#mainTimeline li a:hover {
+    color: #000;
+    border: 1px solid #666;
+    border-top: 2px solid #666;
+    border-bottom: 2px solid #666;
+}
+
+li a:link {
+    color: black;
+}
+
+.subList {
+    padding-left: 0px;
+    padding-right: 0px;
+    top: 25px;
+    background-color: rgba(245, 245, 220, 0.54);
+    height: 200px;
+}
+
+ul li ul li {
+    background-color: orange;
+}
